@@ -9,7 +9,7 @@ try {
     echo "Conexion exitosa!";
 
     foreach($pdo -> query('SELECT * FROM t_colores') as $filas){
-        print_r($filas);
+        print_r($filas) . "<br/>";
     }
     
 } catch (PDOException $e) {
