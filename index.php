@@ -2,13 +2,15 @@
 
 include_once 'conexion.php';
 
+// LEER INFORMACION DE LA BASE DE DATOS
 $sql_leer = 'SELECT * FROM t_colores';
-
 $gsent = $pdo->prepare($sql_leer);
-
 $gsent->execute();
-
 $resultado = $gsent->fetchAll();
+
+// AGREGAR INFORMACION A LA BASE DE DATOS
+
+
 
 ?>
 
@@ -45,6 +47,15 @@ $resultado = $gsent->fetchAll();
                 <?php endforeach ?>
     
             </div>
+            
+            <div class="col-md-6">
+                    <form>
+                    <input type="text" class="form-control" name="color">
+                    <input type="text" class="form-control" name="descripcion">
+                    <button class="btn btn-primary mt-3" >Agregar</button>
+                    </form>
+            </div>
+
 
         </div>
     </div>
