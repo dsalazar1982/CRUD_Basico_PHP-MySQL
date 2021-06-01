@@ -5,10 +5,10 @@ $usuario = 'dba_user';
 $constraseña = 'dba_user@MariaDB2020*';
 
 try {
-    
+
     $pdo = new PDO ($link, $usuario, $constraseña);
     
-    //echo "Conexion exitosa!";
+    echo "Conexion exitosa!";
 
     /*foreach($pdo -> query('SELECT * FROM t_colores') as $filas){
         print_r($filas) . "<br/>";
