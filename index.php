@@ -28,7 +28,11 @@ $resultado = $gsent -> fetchAll();
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container mt-5">
+            <div class="alert alert-primary" role="alert">
+                 A simple primary alert—check it out!
+              </div>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
