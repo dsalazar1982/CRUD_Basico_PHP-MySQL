@@ -38,7 +38,7 @@ $resultado = $gsent->fetchAll();
 
                 <?php foreach($resultado as $dato): ?>
                     <div class="alert alert-primary" role="alert">
-                        A simple primary alert—check it out!
+                        <?php echo $dato['color'] ?>
                     </div>
                 <?php endforeach ?>
     
