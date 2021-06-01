@@ -34,6 +34,8 @@ if($_POST){
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/18130c8aad.js" crossorigin="anonymous"></script>
+
 
     <title>Hello, world!</title>
 </head>
@@ -52,6 +54,9 @@ if($_POST){
                      class="alert alert-<?php echo $dato['color'] ?> text-uppercase"
                       role="alert">
                         <?php echo $dato['color'] ?> - <?php echo $dato['descripcion'] ?>
+                        <a href="" class="float-right">
+                            <i class="far fa-edit"></i>
+                        </a>
                     </div>
                 <?php endforeach ?>
     

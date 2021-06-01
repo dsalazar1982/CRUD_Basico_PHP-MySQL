@@ -11,4 +11,6 @@ $sql_editar = 'UPDATE t_colores SET color=?, descripcion=? WHERE id=?';
 $sentencia_editar = $pdo -> prepare($sql_editar);
 $sentencia_editar -> execute(array($color, $descripcion, $id));
 
+header ('Location: index.php');
+
 
