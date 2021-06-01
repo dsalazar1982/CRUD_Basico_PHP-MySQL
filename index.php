@@ -9,7 +9,15 @@ $gsent->execute();
 $resultado = $gsent->fetchAll();
 
 // AGREGAR INFORMACION A LA BASE DE DATOS
-
+if($_POST){
+    $color = $_POST['color'];
+    $descripcion = $_POST['descripcion'];
+    
+    $sql_agregar = 'INSERT INTO t_colores (color, descripcion) VALUES (?, ?)';
+    $sentencia_agregar = $pdo -> prepare($sql_agregar);
+    $sentencia_agregar -> execute(array($color, $descripcion));
+    header('Location: index.php');
+}
 
 
 ?>
@@ -50,7 +58,7 @@ $resultado = $gsent->fetchAll();
             
             <div class="col-md-6">
                     <h2>AGREAR ELEMENTO</h2>
-                    <form>
+                    <form method="POST">
                     <input type="text" class="form-control mt-1" placeholder="Ingrese nombre del color" required name="color">
                     <input type="text" class="form-control mt-1" placeholder="Ingrese una descripcion el color" name="descripcion">
                     <button class="btn btn-primary mt-3" >Agregar</button>
