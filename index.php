@@ -50,8 +50,8 @@ $resultado = $gsent->fetchAll();
             
             <div class="col-md-6">
                     <form>
-                    <input type="text" class="form-control mt-1" name="color">
-                    <input type="text" class="form-control mt-1" name="descripcion">
+                    <input type="text" class="form-control mt-1" placeholder="Ingrese nombre del color" name="color">
+                    <input type="text" class="form-control mt-1" placeholder="Ingrese una descripcion el color" name="descripcion">
                     <button class="btn btn-primary mt-3" >Agregar</button>
                     </form>
             </div>
