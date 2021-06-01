@@ -40,7 +40,7 @@ $resultado = $gsent->fetchAll();
                     <div
                      class="alert alert-<?php echo $dato['color'] ?> text-uppercase"
                       role="alert">
-                        <?php echo $dato['color'] ?>
+                        <?php echo $dato['color'] ?> - <?php echo $dato['descripcion'] ?>
                     </div>
                 <?php endforeach ?>
     
