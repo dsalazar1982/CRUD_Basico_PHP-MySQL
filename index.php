@@ -37,7 +37,9 @@ $resultado = $gsent->fetchAll();
             <div class="col-md-6">
 
                 <?php foreach($resultado as $dato): ?>
-                    <div class="alert alert-primary text-uppercase" role="alert">
+                    <div
+                     class="alert alert-<?php echo $dato['color'] ?> text-uppercase"
+                      role="alert">
                         <?php echo $dato['color'] ?>
                     </div>
                 <?php endforeach ?>
