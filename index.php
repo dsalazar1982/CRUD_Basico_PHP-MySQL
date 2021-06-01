@@ -33,11 +33,17 @@ $resultado = $gsent->fetchAll();
 
     <div class="container mt-5">
         <div class="row">
+
             <div class="col-md-6">
-                <div class="alert alert-primary" role="alert">
-                    A simple primary alert—check it out!
-                </div>
+
+                <?php foreach($resultado as $dato): ?>
+                    <div class="alert alert-primary" role="alert">
+                        A simple primary alert—check it out!
+                    </div>
+                <?php endforeach ?>
+    
             </div>
+
         </div>
     </div>
 
