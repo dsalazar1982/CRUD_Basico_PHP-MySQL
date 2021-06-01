@@ -1,8 +1,8 @@
 <?php
 
 $link = 'mysql:host=10.0.0.51;dbname=db_colores';
-$usuario = 'user_dba';
-$constraseña = 'user_dba@MariaDB2020*';
+$usuario = 'dba_user';
+$constraseña = 'dba_user@MariaDB2020*';
 
 try {
     $pdo = new PDO ($link, $usuario, $constraseña);
