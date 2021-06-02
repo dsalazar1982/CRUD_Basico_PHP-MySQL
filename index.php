@@ -41,8 +41,8 @@ if ($_POST) {
                     <div class="alert alert-<?php echo $dato['color'] ?> text-uppercase" role="alert">
                         <?php echo $dato['color'] ?> - <?php echo $dato['descripcion'] ?>
                         <a href="" class="float-end">
-                            <!-- <i class="far fa-edit"></i> -->
-                            <i class="fas fa-pencil-alt"></i>
+                            <i class="far fa-edit"></i>
+                            <!--<i class="fas fa-pencil-alt"></i>-->
                         </a>
                     </div>
                 <?php endforeach ?>
