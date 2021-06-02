@@ -9,17 +9,15 @@ $gsent->execute();
 $resultado = $gsent->fetchAll();
 
 // AGREGAR INFORMACION A LA BASE DE DATOS
-if($_POST){
+if ($_POST) {
     $color = $_POST['color'];
     $descripcion = $_POST['descripcion'];
-    
+
     $sql_agregar = 'INSERT INTO t_colores (color, descripcion) VALUES (?, ?)';
-    $sentencia_agregar = $pdo -> prepare($sql_agregar);
-    $sentencia_agregar -> execute(array($color, $descripcion));
+    $sentencia_agregar = $pdo->prepare($sql_agregar);
+    $sentencia_agregar->execute(array($color, $descripcion));
     header('Location: index.php');
 }
-
-
 
 ?>
 
@@ -49,7 +47,7 @@ if($_POST){
 
             <div class="col-md-6">
 
-                <?php foreach($resultado as $dato): ?>
+                <?php foreach ($resultado as $dato): ?>
                     <div
                      class="alert alert-<?php echo $dato['color'] ?> text-uppercase"
                       role="alert">
@@ -58,12 +56,12 @@ if($_POST){
                             <i class="far fa-edit"></i>
                         </a>
                     </div>
-                <?php endforeach ?>
-    
+                <?php endforeach?>
+
             </div>
-            
+
             <div class="col-md-6">
-                    <h2>AGREAR ELEMENTO</h2>
+                    <h2>AGREGAR ELEMENTO</h2>
                     <form method="POST">
                     <input type="text" class="form-control mt-1" placeholder="Ingrese nombre del color" required name="color">
                     <input type="text" class="form-control mt-1" placeholder="Ingrese una descripcion el color" name="descripcion">
