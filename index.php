@@ -40,7 +40,7 @@ if ($_POST) {
                 <?php foreach ($resultado as $dato) : ?>
                     <div class="alert alert-<?php echo $dato['color'] ?> text-uppercase" role="alert">
                         <?php echo $dato['color'] ?> - <?php echo $dato['descripcion'] ?>
-                        <a href="" class="float-right">
+                        <a href="" class="float-end">
                             <!-- <i class="far fa-edit"></i> -->
                             <i class="fas fa-pencil-alt"></i>
                         </a>
