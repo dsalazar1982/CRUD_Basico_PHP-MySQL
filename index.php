@@ -42,7 +42,7 @@ if ($_POST) {
                         <?php echo $dato['color'] ?> - <?php echo $dato['descripcion'] ?>
                         <a href="" class="float-right">
                             <!-- <i class="far fa-edit"></i> -->
-                            <i class="fas fa-pencil-alt">
+                            <i class="fas fa-pencil-alt"></i>
                         </a>
                     </div>
                 <?php endforeach ?>
