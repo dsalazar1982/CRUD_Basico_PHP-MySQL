@@ -37,7 +37,7 @@ if($_POST){
     <script src="https://kit.fontawesome.com/18130c8aad.js" crossorigin="anonymous"></script>
 
 
-    <title>Hello, world!</title>
+    <title>CRUD de Colores en PHP</title>
 </head>
 
 <body>
