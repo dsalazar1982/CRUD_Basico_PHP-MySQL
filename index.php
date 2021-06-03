@@ -52,6 +52,9 @@ if($_GET){
                 <?php foreach ($resultado as $dato) : ?>
                     <div class="alert alert-<?php echo $dato['color'] ?> text-uppercase" role="alert">
                         <?php echo $dato['color'] ?> - <?php echo $dato['descripcion'] ?>
+                        <a href="" class="float-end ml-3">
+                            <i class="far fa-trash-alt"></i>
+                        </a>
                         <a href="index.php?id=<?php echo $dato['id'] ?>" class="float-end">
                             <i class="fas fa-pencil-alt"></i>
                         </a>
