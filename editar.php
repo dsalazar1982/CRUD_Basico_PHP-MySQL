@@ -11,6 +11,8 @@ $sql_editar = 'UPDATE t_colores SET color=?, descripcion=? WHERE id=?';
 $sentencia_editar = $pdo -> prepare($sql_editar);
 $sentencia_editar -> execute(array($color, $descripcion, $id));
 
+// Cerrar conexion de la base de datos
+$pdo = null;
+$sentencia_editar = null;
+
 header ('Location: index.php');
-
-

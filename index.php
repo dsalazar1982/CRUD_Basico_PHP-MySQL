@@ -17,6 +17,11 @@ if ($_POST) {
     $sentencia_agregar = $pdo->prepare($sql_agregar);
     $sentencia_agregar->execute(array($color, $descripcion));
     header('Location: index.php');
+
+    // Cerrar conexion de la base de datos
+    $sentencia_agregar = null;
+    $pdo = null;
+    header('Location: index.php');
 }
 
 if($_GET){
@@ -96,3 +101,9 @@ if($_GET){
 </body>
 
 </html>
+
+<?php
+    // Cerrar conexion a la base de datos
+    $pdo = null;
+    $gsent = null;
+?>
