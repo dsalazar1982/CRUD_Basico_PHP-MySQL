@@ -19,6 +19,13 @@ if ($_POST) {
     header('Location: index.php');
 }
 
+if($_GET){
+    $id = $_GET['id'];
+    $sql_unico = 'SELECT * FROM t_colores WHERE id=?';
+    $gsent_unico = $pdo->prepare($sql_unico);
+    $gsent_unico->execute(array($id));
+    $resultado_unico = $gsent_unico->fetch();
+}
 
 
 ?>
@@ -58,6 +65,16 @@ if ($_POST) {
                         <button class="btn btn-primary mt-3">Agregar</button>
                     </form>
                 <?php endif ?>
+
+                <?php if($_GET): ?>
+                    <h2>EDITAR ELEMENTO</h2>
+                    <form method="GET" action="editar.php">
+                        <input type="text" class="form-control mt-1" name="color" value="">
+                        <input type="text" class="form-control mt-1" name="descripcion" value="">
+                        <button class="btn btn-primary mt-3">Agregar</button>
+                    </form>
+                <?php endif ?>
+
             </div>
         </div>
     </div>
