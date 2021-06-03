@@ -25,6 +25,8 @@ if($_GET){
     $gsent_unico = $pdo->prepare($sql_unico);
     $gsent_unico->execute(array($id));
     $resultado_unico = $gsent_unico->fetch();
+
+    var_dump($resultado_unico);
 }
 
 
@@ -69,9 +71,9 @@ if($_GET){
                 <?php if($_GET): ?>
                     <h2>EDITAR ELEMENTO</h2>
                     <form method="GET" action="editar.php">
-                        <input type="text" class="form-control mt-1" name="color" value="">
-                        <input type="text" class="form-control mt-1" name="descripcion" value="">
-                        <button class="btn btn-primary mt-3">Agregar</button>
+                        <input type="text" class="form-control mt-1" name="color" value="<?php echo $resultado_unico['color']?>">
+                        <input type="text" class="form-control mt-1" name="descripcion" value="<?php echo $resultado_unico['descripcion']?>">
+                        <button class="btn btn-primary mt-3">Actualizar</button>
                     </form>
                 <?php endif ?>
 
