@@ -26,7 +26,7 @@ if($_GET){
     $gsent_unico->execute(array($id));
     $resultado_unico = $gsent_unico->fetch();
 
-    var_dump($resultado_unico);
+    //var_dump($resultado_unico);
 }
 
 
@@ -73,6 +73,7 @@ if($_GET){
                     <form method="GET" action="editar.php">
                         <input type="text" class="form-control mt-1" name="color" value="<?php echo $resultado_unico['color']?>">
                         <input type="text" class="form-control mt-1" name="descripcion" value="<?php echo $resultado_unico['descripcion']?>">
+                        <input type="hidden" class="form-control mt-1" name="id" value="<?php echo $resultado_unico['id']?>">
                         <button class="btn btn-primary mt-3">Actualizar</button>
                     </form>
                 <?php endif ?>
