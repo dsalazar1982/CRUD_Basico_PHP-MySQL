@@ -49,7 +49,7 @@ if ($_GET) {
 <body>
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-6">
                 <?php foreach ($resultado as $dato): ?>
                     <div class="alert alert-<?php echo $dato['color'] ?> text-uppercase" role="alert">
                         <?php echo $dato['color'] ?> - <?php echo $dato['descripcion'] ?>
