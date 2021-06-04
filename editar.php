@@ -6,13 +6,12 @@ $id = $_GET['id'];
 $color = $_GET['color'];
 $descripcion = $_GET['descripcion'];
 
-
 $sql_editar = 'UPDATE t_colores SET color=?, descripcion=? WHERE id=?';
-$sentencia_editar = $pdo -> prepare($sql_editar);
-$sentencia_editar -> execute(array($color, $descripcion, $id));
+$sentencia_editar = $pdo->prepare($sql_editar);
+$sentencia_editar->execute(array($color, $descripcion, $id));
 
 // Cerrar conexion de la base de datos
 $pdo = null;
 $sentencia_editar = null;
 
-header ('Location: index.php');
+header('Location: index.php');

@@ -24,17 +24,13 @@ if ($_POST) {
     header('Location: index.php');
 }
 
-if($_GET){
+if ($_GET) {
     $id = $_GET['id'];
     $sql_unico = 'SELECT * FROM t_colores WHERE id=?';
     $gsent_unico = $pdo->prepare($sql_unico);
     $gsent_unico->execute(array($id));
     $resultado_unico = $gsent_unico->fetch();
-
-    //var_dump($resultado_unico);
 }
-
-
 ?>
 
 <!doctype html>
@@ -53,8 +49,8 @@ if($_GET){
 <body>
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-6">
-                <?php foreach ($resultado as $dato) : ?>
+            <div class="col-md-3">
+                <?php foreach ($resultado as $dato): ?>
                     <div class="alert alert-<?php echo $dato['color'] ?> text-uppercase" role="alert">
                         <?php echo $dato['color'] ?> - <?php echo $dato['descripcion'] ?>
                         <a href="eliminar.php?id=<?php echo $dato['id'] ?>" class="float-end ms-3">
@@ -64,27 +60,27 @@ if($_GET){
                             <i class="fas fa-pencil-alt"></i>
                         </a>
                     </div>
-                <?php endforeach ?>
+                <?php endforeach?>
             </div>
             <div class="col-md-6">
-                <?php if(!$_GET): ?>
+                <?php if (!$_GET): ?>
                     <h2>AGREGAR ELEMENTO</h2>
                     <form method="POST">
                         <input type="text" class="form-control mt-1" placeholder="Ingrese nombre del color" required name="color">
                         <input type="text" class="form-control mt-1" placeholder="Ingrese una descripcion el color" name="descripcion">
                         <button class="btn btn-primary mt-3">Agregar</button>
                     </form>
-                <?php endif ?>
+                <?php endif?>
 
-                <?php if($_GET): ?>
+                <?php if ($_GET): ?>
                     <h2>EDITAR ELEMENTO</h2>
                     <form method="GET" action="editar.php">
-                        <input type="text" class="form-control mt-1" name="color" value="<?php echo $resultado_unico['color']?>">
-                        <input type="text" class="form-control mt-1" name="descripcion" value="<?php echo $resultado_unico['descripcion']?>">
-                        <input type="hidden" class="form-control mt-1" name="id" value="<?php echo $resultado_unico['id']?>">
+                        <input type="text" class="form-control mt-1" name="color" value="<?php echo $resultado_unico['color'] ?>">
+                        <input type="text" class="form-control mt-1" name="descripcion" value="<?php echo $resultado_unico['descripcion'] ?>">
+                        <input type="hidden" class="form-control mt-1" name="id" value="<?php echo $resultado_unico['id'] ?>">
                         <button class="btn btn-primary mt-3">Actualizar</button>
                     </form>
-                <?php endif ?>
+                <?php endif?>
 
             </div>
         </div>
@@ -103,7 +99,7 @@ if($_GET){
 </html>
 
 <?php
-    // Cerrar conexion a la base de datos
-    $pdo = null;
-    $gsent = null;
+// Cerrar conexion a la base de datos
+$pdo = null;
+$gsent = null;
 ?>
