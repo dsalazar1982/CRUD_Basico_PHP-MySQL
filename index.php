@@ -8,7 +8,7 @@ $gsent = $pdo->prepare($sql_leer);
 $gsent->execute();
 $resultado = $gsent->fetchAll();
 
-// AGREGAR INFORMACION A LA BASE DE DATOS
+// AGREGAR DATOS A LA BASE DE DATOS
 if ($_POST) {
     $color = $_POST['color'];
     $descripcion = $_POST['descripcion'];
@@ -24,6 +24,7 @@ if ($_POST) {
     header('Location: index.php');
 }
 
+// EDITAR O ELIMINAR DATOS DE LA BASE DE DATOS
 if ($_GET) {
     $id = $_GET['id'];
     $sql_unico = 'SELECT * FROM t_colores WHERE id=?';
